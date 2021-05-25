@@ -18,8 +18,8 @@ As a general rule, getopt() requires single character flags [getopt(3)](https://
 |---|---|---
 | -help| Help | should be implemented alongside ? - this is non-standard and *not* supported by getopt()
 |  -? | Help   | should be implemented alongside help
-|  -P | Port  | this is fairly non-standard, most go for <host>:</port> or <host> <port>
-|  -H | Host  | this is fairly non-standard, most go for <host>:</port> or <host> <port>  
+|  -P | Port  | this is fairly non-standard, most go for <host>:<port> or <host> <port>
+|  -H | Host  | this is fairly non-standard, most go for <host>:<port> or <host> <port>  
 |   |   |   
 |   |   |   
 |   |   |   
