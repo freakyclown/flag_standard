@@ -7,15 +7,15 @@ unfortunatly there is no set rules on how to present the user with options. This
 
 This standardised list has been created in order to provide new developers a guide on what flags to use.
 
-Where possible is it prefered to use single - to deliniate the flags available e.g. mytool.py -h
+Where possible is it prefered to use single - to deliniate the flags available e.g. `mytool.py -h`
 
-As a general rule, getopt() requires single character flags [getopt(3)](https://man.openbsd.org/getopt.3) except where [getopt_long(3)](https://linux.die.net/man/3/getopt_long) is being used which enables longer flags in the form --flag. Single hyphens should only be used to indicate single user flags, so as to avoid the ambiguity as to whether -help is a long form flag called help or 4 separate single character flags e.g. -h -e -l -p.
+As a general rule, `getopt()` requires single character flags [getopt(3)](https://man.openbsd.org/getopt.3) except where [getopt_long(3)](https://linux.die.net/man/3/getopt_long) is being used which enables longer flags in the form `--flag`. Single hyphens should only be used to indicate single user flags, so as to avoid the ambiguity as to whether `-help` is a long form flag called help or 4 separate single character flags e.g. `-h -e -l -p`.
 
 
 ## Terminology
-*Argument* or *args* are positional parameters to a command. For example, the file paths you provide to the cp command are args. The order of args is often important: cp foo bar means something different to cp bar foo.
+*Argument* or *args* are positional parameters to a command. For example, the file paths you provide to the cp command are args. The order of args is often important: `cp foo bar` means something different to `cp bar foo`.
 
-*Flag* are named parameters, denoted with either hyphen and a single letter name (-r) or a double hyphen and multiple letter name (--recursive). They may or may not also include a user-specified value (--file foo.txt) or (--file=foo.txt). The order of flags, should not affect the program semantics.
+*Flag* are named parameters, denoted with either hyphen and a single letter name (`-r`) or a double hyphen and multiple letter name (`--recursive`). They may or may not also include a user-specified value (`--file foo.txt`) or (`--file=foo.txt`). The order of flags, should not affect the program semantics.
 
 
 ## Guidelines
@@ -24,14 +24,14 @@ These guidelines have been based on the POSIX syntax standard.
 1. Argument names should be no longer than nine characters
 2. Argument names should lowercase for more common flags 
 3. Use only alphanum characters from the portable character set
-4. All arguments should be proceeded by the '-' or '--' 
+4. All arguments should be proceeded by a '`-`' or '`--`' 
 5. If the order of options matter, this should be stated in the help file
 6. Try to use flags over arguments
-7. Have full length versions of all flags (e.g. -h and --help)
+7. Have full length versions of all flags (e.g. `-h` and `--help`)
 8. Use only one-letter flags for commonly used flags
 9. Use the commonly used options listed below
 10. Make the default right for MOST users
-11. Do not read passwords from arguments (use --password-file and force the user to specify the file to prevent it leaking data to shell history)
+11. Do not read passwords from arguments (use `--password-file` and force the user to specify the file to prevent it leaking data to shell history)
 
 
 ## The List
